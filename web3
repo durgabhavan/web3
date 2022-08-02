@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+</head>
+<body>
+    <p id="one"></p> 
+    <p id="example"></p>
+    <p id="three"></p>
+    <p id="random"></p>
+    <p id="guess"></p>
+    <p id="four"></p>
+    <p id="area"></p>
+    <p id="two"></p>
+    <p id="web"></p>
+    
+    <button onclick="Get()">Get the URL</button>
+    <p id="url">Click the button to get the url</p>
+    <script>
+        document.getElementById("one").innerHTML ="Program on random integers:";
+        var ran_int = Math.floor(Math.random() * 11 - 1 + 1) + 1;
+        var guess = prompt("Guess your number b/w 1-10");
+        if (ran_int == guess) {
+            document.getElementById("example").innerHTML = "Guess Matched"+"<br>"+"<br>"+"<br>";
+        }
+        else {
+            document.getElementById("example").innerHTML = "Guess not matched..The random number is " + ran_int+"<br>"+"<br>";
+        }
+        document.getElementById("three").innerHTML = "The datatype of the above variables:";
+        document.getElementById("random").innerHTML = "Random integer : " + typeof (ran_int);
+        document.getElementById("guess").innerHTML = "The guess number : " + typeof (guess)+"<br>"+"<br>"+"<br>";
+        
+        document.getElementById("four").innerHTML = "Area of the circle :";
+        radius = prompt("Enter the radius ");
+        document.getElementById("area").innerHTML = "The area of the circle is " + (2 * 3.14 * radius)+"<br>"+"<br>"+"<br>";
+
+        document.getElementById("two").innerHTML ="Getting the current website URL:";
+        function Get() {
+            var data = document.URL;
+            document.getElementById("url").innerHTML = "The URL of current web page is " + data+"<br>"+"<br>";
+        }
+    </script>
+</body>
+</html>
